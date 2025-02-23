@@ -105,7 +105,7 @@ export function RegisterForm() {
       <Button
         color="#5ac343"
         onPress={handleSubmit}
-        loading={isLoading}
+        disabled={isLoading}
         title="Registrate" />
     
     </View>

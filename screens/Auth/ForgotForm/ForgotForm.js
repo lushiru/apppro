@@ -49,10 +49,9 @@ export function ForgotForm() {
         value={email}
       />
       <Button
-        mode="contained"
         color="#5ac343"
         onPress={handleSubmit}
-        loading={isLoading}
+        disabled={isLoading}
         title="Recuperar Contraseña" />
     </View>
   );

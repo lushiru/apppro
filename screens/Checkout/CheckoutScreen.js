@@ -127,10 +127,9 @@ export function CheckoutScreen(props) {
               value={telefono}
             />
       <Button
-              mode="contained"
               color="#5ac343"
               onPress={handleSubmit}
-              loading={isLoading}
+              disabled={isLoading}
               title="Crear compra" />
     </Layout>
   )

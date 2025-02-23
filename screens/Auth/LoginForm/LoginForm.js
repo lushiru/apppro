@@ -76,7 +76,7 @@ export function LoginForm() {
       <Button
         color="#5ac343"
         onPress={handleSubmit}
-        loading={isLoading}
+        disabled={isLoading}
         title="Entrar" />
         <View style={form.separator} />      
       <Button

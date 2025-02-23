@@ -16,25 +16,27 @@ import { HistorialScreen } from './screens/Historial/HistorialScreen';
 
 export default function App() {
 
-  const Tab = createBottomTabNavigator();
-  const Stack = createNativeStackNavigator();
+  const Taba = createBottomTabNavigator();
+  const Tabb = createBottomTabNavigator();
+  const Stacka = createNativeStackNavigator();
+  const Stackb = createNativeStackNavigator();
 
   function GiftStack() {
     return (
-      <Stack.Navigator>
-        <Stack.Screen name="Giftcard" component={GiftcardScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Checkout" component={CheckoutScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Pagar" component={PagarScreen} options={{ headerShown: false }} />
-      </Stack.Navigator>
+      <Stacka.Navigator>
+        <Stacka.Screen name="Giftcard" component={GiftcardScreen} options={{ headerShown: false }} />
+        <Stacka.Screen name="Checkout" component={CheckoutScreen} options={{ headerShown: false }} />
+        <Stacka.Screen name="Pagar" component={PagarScreen} options={{ headerShown: false }} />
+      </Stacka.Navigator>
     );
   }
 
   function InicioStack() {
     return (
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={LoginForm} options={{ headerShown: false }} />
-        <Stack.Screen name="Forgot" component={ForgotForm} options={{ title: "Olvido Contraseña" }} />
-      </Stack.Navigator>
+      <Stackb.Navigator>
+        <Stackb.Screen name="Login" component={LoginForm} options={{ headerShown: false }} />
+        <Stackb.Screen name="Forgot" component={ForgotForm} options={{ title: "Olvido Contraseña" }} />
+      </Stackb.Navigator>
     );
   }
 
@@ -44,16 +46,16 @@ export default function App() {
 
     return (
       user ? 
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-        <Tab.Screen name="Gift" component={GiftStack} options={{ headerShown: false }} />
-        <Tab.Screen name="Historial" component={HistorialScreen} options={{ headerShown: false }} />
-      </Tab.Navigator>
+      <Taba.Navigator>
+        <Taba.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Taba.Screen name="Gift" component={GiftStack} options={{ headerShown: false }} />
+        <Taba.Screen name="Historial" component={HistorialScreen} options={{ headerShown: false }} />
+      </Taba.Navigator>
       :
-      <Tab.Navigator>
-        <Tab.Screen name="Inicio" component={InicioStack} options={{ headerShown: false }} />
-        <Tab.Screen name="Register" component={RegisterForm} options={{ headerShown: false }} />
-      </Tab.Navigator>
+      <Tabb.Navigator>
+        <Tabb.Screen name="Inicio" component={InicioStack} options={{ headerShown: false }} />
+        <Tabb.Screen name="Register" component={RegisterForm} options={{ headerShown: false }} />
+      </Tabb.Navigator>
     );
   }
 
