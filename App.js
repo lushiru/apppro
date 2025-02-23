@@ -21,15 +21,7 @@ export default function App() {
   const Stacka = createNativeStackNavigator();
   const Stackb = createNativeStackNavigator();
 
-  function GiftStack() {
-    return (
-      <Stacka.Navigator>
-        <Stacka.Screen name="Giftcard" component={GiftcardScreen} options={{ headerShown: false }} />
-        <Stacka.Screen name="Checkout" component={CheckoutScreen} options={{ headerShown: false }} />
-        <Stacka.Screen name="Pagar" component={PagarScreen} options={{ headerShown: false }} />
-      </Stacka.Navigator>
-    );
-  }
+ 
 
   function InicioStack() {
     return (
@@ -48,8 +40,6 @@ export default function App() {
       user ? 
       <Taba.Navigator>
         <Taba.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-        <Taba.Screen name="Gift" component={GiftStack} options={{ headerShown: false }} />
-        <Taba.Screen name="Historial" component={HistorialScreen} options={{ headerShown: false }} />
       </Taba.Navigator>
       :
       <Tabb.Navigator>
