@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ToastAndroid,Image } from "react-native";
 import { productosCtrl } from "../../api/productos";
 import { BasicLayout as Layout } from "../../layouts/BasicLayout";
-import { GridProducts } from "../../components/Shared/GridProducts/GridProducts";
+import { GridProducts } from "../../components/GridProducts/GridProducts";
 import { styles } from "./GiftcardScreen.styles";
 import { ENV } from "../../utils/constants";
 

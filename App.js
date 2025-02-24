@@ -7,7 +7,6 @@ import { useAuth } from "./hooks/useAuth";
 import { LoginForm } from './screens/Auth/LoginForm/LoginForm';
 import { RegisterForm } from './screens/Auth/RegisterForm/RegisterForm';
 import { ForgotForm } from './screens/Auth/ForgotForm/ForgotForm';
-import { HomeScreen } from './screens/Home/HomeScreen';
 import { GiftcardScreen } from './screens/Giftcard/GiftcardScreen';
 import { CheckoutScreen } from './screens/Checkout/CheckoutScreen';
 import { PagarScreen } from './screens/Pagar/PagarScreen';

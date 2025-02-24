@@ -1,6 +1,6 @@
 import { View, Text, Image, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { ENV } from "../../../../utils/constants";
+import { ENV } from "../../../utils/constants";
 import { styles } from "./Product.styles";
 
 export function Product(props) {
