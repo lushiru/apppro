@@ -1,34 +1,27 @@
-import { useState } from "react";
-import { View, Image, Dimensions, Text } from "react-native";
+import { View, Image, Dimensions } from "react-native";
 import { styles } from "./ProductBanners.styles";
 import { ENV } from "../../utils/constants";
-import Carousel from 'react-native-reanimated-carousel';
+import PagerView from 'react-native-pager-view';
+import { map } from "lodash";
+
 
 export function ProductBanners(props) {
   const { banners } = props;
-
-  const [pagingEnabled, setPagingEnabled] = useState(true)
   
   const width = Dimensions.get("window").width;
 
   return (
-      <View style={styles.container}>
-        <View style={{ flex: 1 }}>
-            <Carousel
-                loop
-                width={width}
-                height={width / 2}
-                autoPlay={true}
-                data={banners}
-                scrollAnimationDuration={2000}
-                pagingEnabled={pagingEnabled}
-                renderItem={({ item }) => (     
-                        
-                         <Image source={{ uri: `${ENV.URL}/imagenes/${item.nombre}` }} style={styles.img} />
-                           
-                  )}
-            />
-        </View>
-      </View>
+    <View style={styles.container}>
+      <PagerView style={styles.container} initialPage={0}>
+
+        {map(banners, (item,index) => {
+        
+                  return <View style={styles.page} key={index}>
+                            <Image source={{ uri: `${ENV.URL}/imagenes/${item.nombre}` }} style={styles.carousel} />
+                          </View>
+        })}
+        
+      </PagerView>
+    </View>
   );
 }

@@ -10,18 +10,12 @@ export const styles = StyleSheet.create({
     width: width,
     height: width/2,
   },
-  dotsContainer: {
-    position: "absolute",
-    bottom: -20,
-    width: "100%",
-  },
-  dot: {
-    backgroundColor: "#fff",
-  },
-  CarouselItem: {
+  container: {
     flex: 1,
+  },
+  page: {
     justifyContent: 'center',
-    overflow: 'hidden'
+    alignItems: 'center',
   },
   img: {
     width: "100%",
