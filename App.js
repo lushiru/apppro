@@ -7,7 +7,7 @@ import { useAuth } from "./hooks/useAuth";
 import { LoginForm } from './screens/Auth/LoginForm/LoginForm';
 import { RegisterForm } from './screens/Auth/RegisterForm/RegisterForm';
 import { ForgotForm } from './screens/Auth/ForgotForm/ForgotForm';
-import { HomeScreen } from './screens/Home/HomeScreen';
+import { NadaScreen } from './screens/NadaScreen';
 
 export default function App() {
 
@@ -34,7 +34,7 @@ export default function App() {
     return (
       user ? 
       <Taba.Navigator>
-        <Taba.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Taba.Screen name="Home" component={NadaScreen} options={{ headerShown: false }} />
       </Taba.Navigator>
       :
       <Tabb.Navigator>
