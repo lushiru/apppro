@@ -19,4 +19,13 @@ export const styles = StyleSheet.create({
   dot: {
     backgroundColor: "#fff",
   },
+  CarouselItem: {
+    flex: 1,
+    justifyContent: 'center',
+    overflow: 'hidden'
+  },
+  img: {
+      width: '100%',
+      height: '100%'
+  }
 });

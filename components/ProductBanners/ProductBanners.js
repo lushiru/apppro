@@ -22,7 +22,9 @@ export function ProductBanners(props) {
                 scrollAnimationDuration={2000}
                 pagingEnabled={pagingEnabled}
                 renderItem={({ item }) => (     
-                      <Image source={{ uri: `${ENV.URL}/imagenes/${item.nombre}` }} style={styles.carousel} />      
+                      <View style={styles.CarouselItem}>
+                          <Image styles={styles.img} source={{ uri: `${ENV.URL}/imagenes/${item.nombre}` }} />
+                      </View>     
                   )}
             />
         </View>
