@@ -11,6 +11,7 @@ import { GiftcardScreen } from './screens/Giftcard/GiftcardScreen';
 import { CheckoutScreen } from './screens/Checkout/CheckoutScreen';
 import { PagarScreen } from './screens/Pagar/PagarScreen';
 import { HistorialScreen } from './screens/Historial/HistorialScreen';
+import { HomeScreen } from './screens/Home/HomeScreen';
 
 
 export default function App() {
@@ -46,6 +47,7 @@ export default function App() {
     return (
       user ? 
       <Taba.Navigator>
+        <Taba.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Taba.Screen name="Gift" component={GiftStack} options={{ headerShown: false }} />
         <Taba.Screen name="Historial" component={HistorialScreen} options={{ headerShown: false }} />
       </Taba.Navigator>
