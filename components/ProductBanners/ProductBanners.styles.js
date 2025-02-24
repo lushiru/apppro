@@ -4,16 +4,17 @@ const width = Dimensions.get("window").width;
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop : 100,
+    flex: 1,
+  },
+  contenedor: {    
+    width: width,
+    height: width/2,
   },
   carousel: {
     width: width,
     height: width/2,
   },
-  container: {
-    flex: 1,
-  },
-  page: {
+  page: {    
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -21,5 +22,9 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: width/2,
     resizeMode: "contain",
-  }
+  },
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });
