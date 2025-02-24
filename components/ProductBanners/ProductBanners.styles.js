@@ -5,7 +5,6 @@ const width = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
   container: {
     paddingTop : 100,
-    position: "relative",
   },
   carousel: {
     width: width,
@@ -25,7 +24,8 @@ export const styles = StyleSheet.create({
     overflow: 'hidden'
   },
   img: {
-      width: '100%',
-      height: '100%'
+    width: "100%",
+    height: width/2,
+    resizeMode: "contain",
   }
 });
