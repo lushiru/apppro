@@ -7,7 +7,7 @@ import Carousel from 'react-native-reanimated-carousel';
 export function ProductBanners(props) {
   const { banners } = props;
 
-  const [bannerActive, setBannerActive] = useState(0);
+  const [pagingEnabled, setPagingEnabled] = useState(true)
   
   const width = Dimensions.get("window").width;
 
@@ -15,13 +15,12 @@ export function ProductBanners(props) {
       <View style={styles.container}>
         <View style={{ flex: 1 }}>
             <Carousel
-                loop
                 width={width}
                 height={width / 2}
                 autoPlay={true}
                 data={banners}
                 scrollAnimationDuration={2000}
-                onSnapToItem={(index) => setBannerActive(index)}
+                pagingEnabled={pagingEnabled}
                 renderItem={({ item }) => (     
                       <Image source={{ uri: `${ENV.URL}/imagenes/${item.nombre}` }} style={styles.carousel} />      
                   )}
